@@ -1,0 +1,33 @@
+﻿<div id="login-card" class="card">
+  <h4 class="card-header text-white font-weight-bold text-center"><img class="mb-2 mt-2" id="angular-logo-2" src="https://angular.io/assets/images/logos/angular/angular.png"
+    alt="angular-logo"> Angular App Login</h4>
+  <hr id="hl-border">
+  <p class="pt-4 text-center font-weight-bold text-white p-3">Note: Before you can login, please register first. Thanks.</p>
+  <div class="card-body">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="form-group text-white font-weight-bold">
+        <label for="username">Username</label>
+        <input type="text" formControlName="username" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+        <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+          <div *ngIf="f.username.errors.required">Username is required</div>
+        </div>
+      </div>
+      <div class="form-group text-white font-weight-bold">
+        <label for="password">Password</label>
+        <input type="password" formControlName="password" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+          <div *ngIf="f.password.errors.required">Password is required</div>
+        </div>
+      </div>
+      <div class="form-group mt-4">
+        <button [disabled]="loading" class="btn btn-primary font-weight-bold">
+          <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+          Login
+        </button>
+        <a routerLink="../register" class="btn btn-link font-weight-bold text-success">Register</a>
+      </div>
+    </form>
+  </div>
+</div>

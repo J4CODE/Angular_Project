@@ -1,0 +1,33 @@
+﻿<!-- nav -->
+<nav class="navbar navbar-expand navbar-dark" style="background-color: black;" *ngIf="user">
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+        <a class="nav-item nav-link" routerLink="/users" routerLinkActive="active">Users</a>
+        <a class="nav-item nav-link" (click)="logout()">Logout</a>
+    </div>
+</nav>
+
+<!-- main app container -->
+<div class="app-container" [ngClass]="{ 'bg-light': user }">
+    <alert></alert>
+    <router-outlet></router-outlet>
+</div>
+
+<!-- credits -->
+<div class="text-center mt-5">
+    <p>Learn more about Angular :
+        <a class="text-dark font-weight-bold" href="https://angular.io/" 
+        target="_blank">Working with the Angular.io Framework</a>
+    </p>
+    <p>
+        <a class="text-dark font-weight-bold" href="https://rjay-full-stack-dev.devpunch.com/" target="_blank">&copy; 2020 | DevPunch.com</a>
+    </p>
+</div>
+
+<nav class="navbar navbar-expand navbar-dark" style="background-color: black;" *ngIf="user">
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+        <a class="nav-item nav-link" routerLink="/users" routerLinkActive="active">Users</a>
+        <a class="nav-item nav-link" (click)="logout()">Logout</a>
+    </div>
+</nav>

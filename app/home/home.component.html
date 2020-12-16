@@ -1,0 +1,53 @@
+﻿<header>
+  <div class="overlay"></div>
+  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+    <source src="https://mdbootstrap.com/img/video/Lines.mp4" type="video/mp4">
+  </video>
+  <div class="container h-100">
+    <div class="d-flex h-100 text-center align-items-center">
+      <div class="w-100 text-white">
+        <h1 class="display-4 mt-4 pt-4 font-weight-bold">My <i class="fab fa-angular"></i>Angular Project.</h1>
+        <img class="mb-2 mt-2" id="angular-logo" src="https://angular.io/assets/images/logos/angular/angular.png"
+          alt="angular-logo">
+        <p class="lead mb-0">Built with Bootstrap, NodeJS, NPM <br> and the Angular Framework.</p>
+        <p class="mt-4 pt-3 pb-3 h4"><a class="text-white font-weight-bold" routerLink="/users">Manage Your Registered
+            Users</a></p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="text-center mt-1 font-weight-bold">
+  <div class="p-4 text-center">
+    <div class="container pt-2">
+      <h1>Hi {{user.firstName}}!</h1>
+      <p>You're now logged in.</p>
+    </div>
+  </div>
+</div>
+
+<hr id="hl-border">
+
+<section class="my-">
+  <div class="row m-4 p-1 pt-4 mb-4">
+    <div class="row pb-3">
+      <div class="col-md-8 mx-auto">
+        <h3 class="text-center pb-3 font-weight-bold">Building with Angular and Bootstrap</h3>
+        <p class="font-weight-bold h5">What is Angular? <br> <em><small> by Łukasz Głuszek</small></em></p>
+        <p>Angular can be used for just about any kind of web application, like Content Management Systems (CMS),
+          e-commerce applications, static websites, design systems, banking websites, and more. It will greatly
+          depend on the type of project's specs, your dev team size, and your product scope.</p>
+
+        <p>Angular can be a great choice for many different types of web applications. It offers all the
+          most sought-after features but, most importantly, it's supported by Google and has a vibrant
+          community around the framework.</p>
+      </div>
+
+      <div class="col-md-8 mx-auto mt-3">
+        <p class="font-weight-bold h5">What is Bootstrap? <br> <em><small> from the Bootstrap Docs</small></em></p>
+        <p>Bootstrap is a front-end development framework that enables developers & designers to quickly build fully
+          responsive websites.</p>
+      </div>
+    </div>
+  </div>
+</section>
